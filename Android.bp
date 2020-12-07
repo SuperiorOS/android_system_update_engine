@@ -63,11 +63,6 @@ cc_defaults {
     ldflags: ["-Wl,--gc-sections"],
 
     product_variables: {
-        superior: {
-            target_uses_prebuilt_dynamic_partitions: {
-                cflags: ["-DTARGET_USES_PREBUILT_DYNAMIC_PARTITIONS"],
-            },
-        },
         pdk: {
             enabled: false,
         },
@@ -251,6 +246,7 @@ cc_library_static {
         "ue_defaults",
         "libupdate_engine_boot_control_exports",
         "libpayload_consumer_exports",
+        "target_uses_prebuilt_dynamic_partitions_defaults",
     ],
     recovery_available: true,
 
